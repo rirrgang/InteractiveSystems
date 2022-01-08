@@ -10,7 +10,7 @@ body {
     background-color: rgb(238, 238, 238);
 }
 
-.container {
+.calendar {
     display: flex;
     flex-direction: column;
     width: 300px;
