@@ -6,12 +6,48 @@
         sans-serif;
 }
 
+body {
+    background-color: rgb(238, 238, 238);
+    color: rgb(238, 238, 238);
+}
+
+.modularUpperContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.modularContainer {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    color: rgb(0, 85, 212);
+    border: 4px solid rgb(0, 85, 212);
+    padding: 8px 16px;
+}
+
+.modularPage {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.modularContainer .actionButtonsContainer {
+    margin: 0;
+    margin-top: 15px;
+    padding: 0;
+}
+
+.modularContainer .actionButtonsContainer button {
+    padding: 5px;
+}
+
 .container {
     width: 100%;
     height: 100vh;
-    background-color: rgb(238, 238, 238);
-    color: rgb(238, 238, 238);
-    display: flex;
+    /*display: flex; */
+    display: none;
     justify-content: center;
     align-items: center;
 }
@@ -156,4 +192,15 @@
 
 .ok {
     background: green;
+}
+
+.fa-times {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 25px;
+    padding: 0px 5px;
+    background: red;
+    color: white;
+    cursor: pointer;
 }
