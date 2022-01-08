@@ -1,0 +1,16 @@
+[{
+        "id": "0",
+        "task": "Please select the date '01.01.2022.'",
+        "date": "01.01.2022"
+    },
+    {
+        "id": "1",
+        "task": "Please select the date '02.02.2022.'",
+        "date": "01.02.2022"
+    },
+    {
+        "id": "2",
+        "task": "Please select the date '03.03.2022.'",
+        "date": "01.02.2022"
+    }
+]
