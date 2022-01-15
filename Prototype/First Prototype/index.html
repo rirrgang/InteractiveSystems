@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Kalender</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Pacifico&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="modularUpperContainer">
+        <div class="modularContainer" style="display: none;">
+            <i class="fas fa-times"></i>
+            <div class="modularPageQuestion"></div>
+            <div class="actionButtonsContainer">
+                <a href="/Prototype/participation.html"><button class="modalPageCancel">Cancel</button></a>
+                <button class="modalPageOk">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class=innercontainer>
+            <div class="modularPageQuestionTop"></div>
+            <div class="calendar">
+
+                <div class="date">
+                    <p class="year"></p>
+                    <p class="fullDate"></p>
+                </div>
+                <div class="calendarContainer">
+                    <div class="timePicker">
+                        <i class="fas fa-angle-left prev"></i>
+                        <div class="monthAndYear"></div>
+                        <i class="fas fa-angle-right next"></i>
+                    </div>
+                    <div class="weekdays">
+                        <div>Sun</div>
+                        <div>Mon</div>
+                        <div>Tue</div>
+                        <div>Wed</div>
+                        <div>Thu</div>
+                        <div>Fri</div>
+                        <div>Sat</div>
+                    </div>
+                    <div class="days"></div>
+                    <div class="actionButtonsContainer">
+                        <a href="/Prototype/participation.html"><button class="cancel">Cancel</button></a>
+                        <button class="ok">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modularUpperContainer" style="display: none;">
+        <div class="modularContainer">
+            <i class="fas fa-times"></i>
+            <div class="modularPageQuestion">Next Question</div>
+            <div class="actionButtonsContainer">
+                <button class="modalPageOk">OK</button>
+            </div>
+        </div>
+    </div>
+
+    
+
+</body>
+
+<script src="/Prototype/trackData.js"></script>
+<script src="/Prototype/loadJSON.js"></script>
+
+<script src="script.js"></script>
+
+</html>

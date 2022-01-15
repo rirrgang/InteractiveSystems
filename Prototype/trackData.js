@@ -1,6 +1,6 @@
 
 function trackTime() {
-    return elapsedTime = (endDate - startDate) / 1000;
+    return (endDate - startDate) / 1000;
 }
 
 function startTime() {
@@ -44,6 +44,8 @@ function trackMouseclicks(event) {
 function commitTrackedData() {
     //databse shitty fuck
 }
+
+
 
 
 

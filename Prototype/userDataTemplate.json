@@ -1,0 +1,13 @@
+[{
+        "id" : "0",
+        "taskID": "0",
+        "answer": "0",
+        "taskCorrectAnswered": "false",
+        "prototype": "0",
+        "answerDate": "xx.xx.xxxx xx:xx:xx",
+        "overallMouseClicksCounter": "0",
+        "clickOnCalendarCounter": "0",
+        "clickOnDaysCounter" : "0",
+        "timeNeededForTask": "xx:xx:xx"   
+    }
+]

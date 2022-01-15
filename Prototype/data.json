@@ -1,16 +1,21 @@
-[{
+[
+    {
         "id": "0",
         "task": "Please select the date '01.01.2022.'",
-        "date": "01.01.2022"
+        "year": "2022",
+        "fullDate": "Sat Jan 01"
+        
     },
     {
         "id": "1",
         "task": "Please select the date '02.02.2022.'",
-        "date": "01.02.2022"
+        "year": "2022",
+        "fullDate": "Sun Jan 02"
     },
     {
         "id": "2",
         "task": "Please select the date '03.03.2022.'",
-        "date": "01.02.2022"
+        "year": "2022",
+        "fullDate": "Mon Jan 03"
     }
 ]
