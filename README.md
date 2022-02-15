@@ -1,4 +1,4 @@
-#Interactive Systems
+*Interactive Systems
 
 This Repository contains our project files for the course "Interactive Systems"
 
