@@ -104,12 +104,12 @@ document.querySelector('.ok').addEventListener('click', () => {
     if (checkSelectedDate()) {
         updateUserDataJSON(true);
         document.querySelector('.calendarContainer').innerHTML = '<i class ="fas fa-check-circle"></i>';
+        nextQuestion();
     }else{
         updateUserDataJSON(false);
         document.querySelector('.calendarContainer').innerHTML = '<i class="fas fa-times-circle"></i>';
+        reloadQuestion();
     }
-
-    nextQuestion();
 
 });
 
@@ -121,6 +121,6 @@ document.querySelector('.modalPageOk').addEventListener('click', () => {
     document.querySelector('.modularUpperContainer').style.display = "none";
 });
 
-
-
 renderCalendar();
+
+let calendarPrototype = 0;

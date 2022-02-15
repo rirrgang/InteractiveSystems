@@ -111,6 +111,7 @@ document.querySelector('.daysUp').addEventListener('click', () => {
             element.innerHTML = monthDays;
         }
     });
+    setFullDate();
 });
 
 document.querySelector('.daysDown').addEventListener('click', () => {
@@ -125,6 +126,7 @@ document.querySelector('.daysDown').addEventListener('click', () => {
             element.innerHTML = '01';
         }
     });
+    setFullDate();
 });
 
 let counter = -1;
@@ -143,6 +145,7 @@ document.querySelector('.monthsUp').addEventListener('click', () => {
     document.querySelectorAll('.dayPickerContainer p').forEach(element => {
         calculateDays(element);
     });
+    setFullDate();
 });
 
 document.querySelector('.monthsDown').addEventListener('click', () => {
@@ -160,6 +163,7 @@ document.querySelector('.monthsDown').addEventListener('click', () => {
     document.querySelectorAll('.dayPickerContainer p').forEach(element => {
         calculateDays(element);
     });
+    setFullDate();
 });
 
 document.querySelector('.yearsUp').addEventListener('click', () => {
@@ -167,6 +171,8 @@ document.querySelector('.yearsUp').addEventListener('click', () => {
         element.innerHTML = parseInt(element.innerHTML) - 1;
         calculateDays(element);
     });
+
+    setYear();
 });
 
 document.querySelector('.yearsDown').addEventListener('click', () => {
@@ -174,8 +180,52 @@ document.querySelector('.yearsDown').addEventListener('click', () => {
         element.innerHTML = parseInt(element.innerHTML) + 1;
         calculateDays(element);
     });
+
+    setYear();
 });
 
+function setYear() {
+    let year = document.querySelector(".currentYear").innerHTML;
+    if (year != null) {
+        document.querySelector('.year').innerHTML = year;
+    }
+}
+
+function setFullDate() {
+    let currentMonth = document.querySelector(".currentMonth").innerHTML;
+    let currentDay = document.querySelector(".currentDay").innerHTML;
+    let fullDate = currentMonth + " " + currentDay;
+    if (fullDate != null) {
+        document.querySelector('.fullDate').innerHTML = fullDate;
+    }
+}
+
+
 document.querySelector('.ok').addEventListener('click', () => {
-    document.querySelector('.calendarContainer').innerHTML = '<i class ="fas fa-check-circle"></i>';
+
+    stopTime();
+
+    if (checkSelectedDate()) {
+        updateUserDataJSON(true);
+        document.querySelector('.calendarContainer').innerHTML = '<i class ="fas fa-check-circle"></i>';
+        nextQuestion();
+    } else {
+        updateUserDataJSON(false);
+        document.querySelector('.calendarContainer').innerHTML = '<i class="fas fa-times-circle"></i>';
+        reloadQuestion();
+    }
+
 });
+
+document.querySelector('.modalPageOk').addEventListener('click', () => {
+
+    startTime();
+
+    document.querySelector('.calendar').style.display = "flex";
+    document.querySelector('.modularUpperContainer').style.display = "none";
+});
+
+setFullDate();
+setYear();
+
+let calendarPrototype = 1;

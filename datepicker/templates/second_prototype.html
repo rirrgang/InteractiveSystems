@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/second_prototype_style.css' %}">
+    <title>Kalender</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Pacifico&display=swap" rel="stylesheet">
+    <script src="{% static 'scripts/jquery-3.6.0.js' %}"></script>
+</head>
+
+<body>
+
+    <div class="modularUpperContainer">
+        <div class="modularContainer" style="display: none;">
+            <i class="fas fa-times"></i>
+            <div class="modularPageQuestion"></div>
+            <div class="actionButtonsContainer">
+                <a href="{% url 'participation' %}"><button class="modalPageCancel">Cancel</button></a>
+                <button class="modalPageOk">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="calendar">
+        <div class=innercontainer>
+            <div class="modularPageQuestionTop"></div>
+            <div class="header">
+                <div class="date">
+                    <p class="year">2020</p>
+                    <p class="fullDate">YJESS</p>
+                </div>
+            </div>
+            <div class="calendarContainer">
+                <div class="timePickerContainer">
+                    <div class="dayPickerContainer">
+                        <i class="fas fa-angle-up daysUp"></i>
+                        <p></p>
+                        <p class="currentDay"></p>
+                        <p></p>
+                        <i class="fas fa-angle-down daysDown"></i>
+                    </div>
+                    <div class="monthPickerContainer">
+                        <i class="fas fa-angle-up monthsUp"></i>
+                        <p></p>
+                        <p class="currentMonth"></p>
+                        <p></p>
+                        <i class="fas fa-angle-down monthsDown"></i>
+                    </div>
+                    <div class="yearPickerContainer">
+                        <i class="fas fa-angle-up yearsUp"></i>
+                        <p></p>
+                        <p class="currentYear"></p>
+                        <p></p>
+                        <i class="fas fa-angle-down yearsDown"></i>
+                    </div>
+                </div>
+                <div class="actionButtonsContainer">
+                    <a href="{% url 'participation' %}"><button class="cancel">Cancel</button></a>
+                    <button class="ok">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <input type="hidden" id="urlPrototype0" data-url="{% url 'first_prototype' %}" />
+    <input type="hidden" id="urlPrototype1" data-url="{% url 'second_prototype' %}" />
+    <input type="hidden" id="urlParticipation" data-url="{% url 'participation' %}" />
+</body>
+
+
+<script src="{% static 'scripts/trackData.js' %}"></script>
+<script src="{% static 'scripts/loadJSON.js' %}"></script>
+
+<script src="{% static 'scripts/second_prototype_script.js' %}"></script>
+
+</html>

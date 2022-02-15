@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Prototype/style.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>Kalender</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Pacifico&display=swap" rel="stylesheet">
@@ -19,7 +21,7 @@
             <i class="fas fa-times"></i>
             <div class="modularPageQuestion">Thanks for your participation!</div>
             <div class="actionButtonsContainer">
-                <a href="/Prototype/home.html"><button class="modalPageOk">OK</button></a>
+                <a href="{% url 'home' %}"><button class="modalPageOk">OK</button></a>
             </div>
         </div>
     </div>
